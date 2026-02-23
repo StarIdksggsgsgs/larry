@@ -17,7 +17,7 @@ local function run_catnapdumper(input_code)
     f:close()
 
     -- Run catnapdumper.lua
-    local cmd = string.format("lua catnapdumper.lua %s %s", input_file, output_file)
+    local cmd = string.format("lua catnapdumper.lua.txt %s %s", input_file, output_file)
     local ok, exit, code = os.execute(cmd)
     if exit ~= 0 then
         return nil, "Error running catnapdumper"
